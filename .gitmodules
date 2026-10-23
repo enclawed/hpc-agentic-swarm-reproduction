@@ -1,0 +1,3 @@
+[submodule "enclawed-oss"]
+	path = enclawed-oss
+	url = https://github.com/enclawed/enclawed-oss.git

@@ -1,0 +1,360 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 83 and seed 5574755479225235702 with 16 workers on 32 cores with 14252MB heap and 64MB offheap memory [pid: 2111698] (Linux 6.18.33.2-microsoft-standard-WSL2 amd64, Ubuntu 25.0.4.1 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /tmp/tmp.fr1eV97o1S/m1/MC_n4_f1_equivocating.tla
+Parsing file /tmp/tmp.fr1eV97o1S/m1/SwarmFinality.tla
+Parsing file /tmp/Integers.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/Sequences.tla
+Parsing file /tmp/Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module SwarmFinality
+Semantic processing of module MC_n4_f1_equivocating
+Starting... (2026-10-22 21:01:51)
+Computing initial states...
+Finished computing initial states: 1 distinct state generated at 2026-10-22 21:01:51.
+Error: Invariant Agreement is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ decision = (c1 :> None @@ c2 :> None @@ c3 :> None)
+/\ final = {[src |-> b1, v |-> A], [src |-> b1, v |-> B]}
+/\ prevote = { [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+/\ propose = { [r |-> 1, src |-> b1, v |-> A, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> 0],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> 0] }
+/\ lockedRound = (c1 :> -1 @@ c2 :> -1 @@ c3 :> -1)
+/\ validRound = (c1 :> -1 @@ c2 :> -1 @@ c3 :> -1)
+/\ step = (c1 :> "propose" @@ c2 :> "propose" @@ c3 :> "propose")
+/\ lockedValue = (c1 :> None @@ c2 :> None @@ c3 :> None)
+/\ validValue = (c1 :> None @@ c2 :> None @@ c3 :> None)
+/\ committed = (c1 :> None @@ c2 :> None @@ c3 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 0 @@ c3 :> 0)
+/\ precommit = { [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+
+State 2: <InsertProposal line 109, col 3 to line 115, col 51 of module SwarmFinality>
+/\ decision = (c1 :> None @@ c2 :> None @@ c3 :> None)
+/\ final = {[src |-> b1, v |-> A], [src |-> b1, v |-> B]}
+/\ prevote = { [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+/\ propose = { [r |-> 0, src |-> c1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> 0],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> 0] }
+/\ lockedRound = (c1 :> -1 @@ c2 :> -1 @@ c3 :> -1)
+/\ validRound = (c1 :> -1 @@ c2 :> -1 @@ c3 :> -1)
+/\ step = (c1 :> "propose" @@ c2 :> "propose" @@ c3 :> "propose")
+/\ lockedValue = (c1 :> None @@ c2 :> None @@ c3 :> None)
+/\ validValue = (c1 :> None @@ c2 :> None @@ c3 :> None)
+/\ committed = (c1 :> None @@ c2 :> None @@ c3 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 0 @@ c3 :> 0)
+/\ precommit = { [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+
+State 3: <UponProposal line 119, col 3 to line 125, col 67 of module SwarmFinality>
+/\ decision = (c1 :> None @@ c2 :> None @@ c3 :> None)
+/\ final = {[src |-> b1, v |-> A], [src |-> b1, v |-> B]}
+/\ prevote = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+/\ propose = { [r |-> 0, src |-> c1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> 0],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> 0] }
+/\ lockedRound = (c1 :> -1 @@ c2 :> -1 @@ c3 :> -1)
+/\ validRound = (c1 :> -1 @@ c2 :> -1 @@ c3 :> -1)
+/\ step = (c1 :> "prevote" @@ c2 :> "propose" @@ c3 :> "propose")
+/\ lockedValue = (c1 :> None @@ c2 :> None @@ c3 :> None)
+/\ validValue = (c1 :> None @@ c2 :> None @@ c3 :> None)
+/\ committed = (c1 :> None @@ c2 :> None @@ c3 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 0 @@ c3 :> 0)
+/\ precommit = { [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+
+State 4: <UponQuorumPrevotes line 146, col 3 to line 157, col 70 of module SwarmFinality>
+/\ decision = (c1 :> None @@ c2 :> None @@ c3 :> None)
+/\ final = {[src |-> b1, v |-> A], [src |-> b1, v |-> B]}
+/\ prevote = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+/\ propose = { [r |-> 0, src |-> c1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> 0],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> 0] }
+/\ lockedRound = (c1 :> 0 @@ c2 :> -1 @@ c3 :> -1)
+/\ validRound = (c1 :> 0 @@ c2 :> -1 @@ c3 :> -1)
+/\ step = (c1 :> "precommit" @@ c2 :> "propose" @@ c3 :> "propose")
+/\ lockedValue = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ validValue = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ committed = (c1 :> None @@ c2 :> None @@ c3 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 0 @@ c3 :> 0)
+/\ precommit = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+
+State 5: <Decide line 176, col 3 to line 184, col 57 of module SwarmFinality>
+/\ decision = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ final = {[src |-> c1, v |-> B], [src |-> b1, v |-> A], [src |-> b1, v |-> B]}
+/\ prevote = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+/\ propose = { [r |-> 0, src |-> c1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> 0],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> 0] }
+/\ lockedRound = (c1 :> 0 @@ c2 :> -1 @@ c3 :> -1)
+/\ validRound = (c1 :> 0 @@ c2 :> -1 @@ c3 :> -1)
+/\ step = (c1 :> "decided" @@ c2 :> "propose" @@ c3 :> "propose")
+/\ lockedValue = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ validValue = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ committed = (c1 :> None @@ c2 :> None @@ c3 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 0 @@ c3 :> 0)
+/\ precommit = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+
+State 6: <Commit line 188, col 3 to line 191, col 65 of module SwarmFinality>
+/\ decision = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ final = {[src |-> c1, v |-> B], [src |-> b1, v |-> A], [src |-> b1, v |-> B]}
+/\ prevote = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+/\ propose = { [r |-> 0, src |-> c1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> 0],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> 0] }
+/\ lockedRound = (c1 :> 0 @@ c2 :> -1 @@ c3 :> -1)
+/\ validRound = (c1 :> 0 @@ c2 :> -1 @@ c3 :> -1)
+/\ step = (c1 :> "decided" @@ c2 :> "propose" @@ c3 :> "propose")
+/\ lockedValue = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ validValue = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ committed = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 0 @@ c3 :> 0)
+/\ precommit = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+
+State 7: <NextRound line 168, col 3 to line 172, col 64 of module SwarmFinality>
+/\ decision = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ final = {[src |-> c1, v |-> B], [src |-> b1, v |-> A], [src |-> b1, v |-> B]}
+/\ prevote = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+/\ propose = { [r |-> 0, src |-> c1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> 0],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> 0] }
+/\ lockedRound = (c1 :> 0 @@ c2 :> -1 @@ c3 :> -1)
+/\ validRound = (c1 :> 0 @@ c2 :> -1 @@ c3 :> -1)
+/\ step = (c1 :> "decided" @@ c2 :> "propose" @@ c3 :> "propose")
+/\ lockedValue = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ validValue = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ committed = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 1 @@ c3 :> 0)
+/\ precommit = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+
+State 8: <UponProposal line 119, col 3 to line 125, col 67 of module SwarmFinality>
+/\ decision = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ final = {[src |-> c1, v |-> B], [src |-> b1, v |-> A], [src |-> b1, v |-> B]}
+/\ prevote = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> c2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+/\ propose = { [r |-> 0, src |-> c1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> 0],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> 0] }
+/\ lockedRound = (c1 :> 0 @@ c2 :> -1 @@ c3 :> -1)
+/\ validRound = (c1 :> 0 @@ c2 :> -1 @@ c3 :> -1)
+/\ step = (c1 :> "decided" @@ c2 :> "prevote" @@ c3 :> "propose")
+/\ lockedValue = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ validValue = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ committed = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 1 @@ c3 :> 0)
+/\ precommit = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+
+State 9: <UponQuorumPrevotes line 146, col 3 to line 157, col 70 of module SwarmFinality>
+/\ decision = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ final = {[src |-> c1, v |-> B], [src |-> b1, v |-> A], [src |-> b1, v |-> B]}
+/\ prevote = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> c2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+/\ propose = { [r |-> 0, src |-> c1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> 0],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> 0] }
+/\ lockedRound = (c1 :> 0 @@ c2 :> 1 @@ c3 :> -1)
+/\ validRound = (c1 :> 0 @@ c2 :> 1 @@ c3 :> -1)
+/\ step = (c1 :> "decided" @@ c2 :> "precommit" @@ c3 :> "propose")
+/\ lockedValue = (c1 :> B @@ c2 :> A @@ c3 :> None)
+/\ validValue = (c1 :> B @@ c2 :> A @@ c3 :> None)
+/\ committed = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 1 @@ c3 :> 0)
+/\ precommit = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> c2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+
+State 10: <Decide line 176, col 3 to line 184, col 57 of module SwarmFinality>
+/\ decision = (c1 :> B @@ c2 :> A @@ c3 :> None)
+/\ final = { [src |-> c1, v |-> B],
+  [src |-> c2, v |-> A],
+  [src |-> b1, v |-> A],
+  [src |-> b1, v |-> B] }
+/\ prevote = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> c2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+/\ propose = { [r |-> 0, src |-> c1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> 0],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> 0] }
+/\ lockedRound = (c1 :> 0 @@ c2 :> 1 @@ c3 :> -1)
+/\ validRound = (c1 :> 0 @@ c2 :> 1 @@ c3 :> -1)
+/\ step = (c1 :> "decided" @@ c2 :> "decided" @@ c3 :> "propose")
+/\ lockedValue = (c1 :> B @@ c2 :> A @@ c3 :> None)
+/\ validValue = (c1 :> B @@ c2 :> A @@ c3 :> None)
+/\ committed = (c1 :> B @@ c2 :> None @@ c3 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 1 @@ c3 :> 0)
+/\ precommit = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> c2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+
+State 11: <Commit line 188, col 3 to line 191, col 65 of module SwarmFinality>
+/\ decision = (c1 :> B @@ c2 :> A @@ c3 :> None)
+/\ final = { [src |-> c1, v |-> B],
+  [src |-> c2, v |-> A],
+  [src |-> b1, v |-> A],
+  [src |-> b1, v |-> B] }
+/\ prevote = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> c2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+/\ propose = { [r |-> 0, src |-> c1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> 0],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> B, vr |-> 0] }
+/\ lockedRound = (c1 :> 0 @@ c2 :> 1 @@ c3 :> -1)
+/\ validRound = (c1 :> 0 @@ c2 :> 1 @@ c3 :> -1)
+/\ step = (c1 :> "decided" @@ c2 :> "decided" @@ c3 :> "propose")
+/\ lockedValue = (c1 :> B @@ c2 :> A @@ c3 :> None)
+/\ validValue = (c1 :> B @@ c2 :> A @@ c3 :> None)
+/\ committed = (c1 :> B @@ c2 :> A @@ c3 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 1 @@ c3 :> 0)
+/\ precommit = { [r |-> 0, src |-> c1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> B],
+  [r |-> 0, src |-> b1, v |-> Nil],
+  [r |-> 1, src |-> c2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b1, v |-> B],
+  [r |-> 1, src |-> b1, v |-> Nil] }
+
+452866 states generated, 158299 distinct states found, 109523 states left on queue.
+The depth of the complete state graph search is 11.
+The average outdegree of the complete state graph is 3 (minimum is 0, the maximum 13 and the 95th percentile is 7).
+Finished in 01s at (2026-10-22 21:01:52)

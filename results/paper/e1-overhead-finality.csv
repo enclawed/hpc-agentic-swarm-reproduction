@@ -1,0 +1,7 @@
+ranks,mode,rep,loop_s,wall_s,admit_ms,lease_ms_max,supervisor_cpu_ms_mean,blocks
+16,bare,1,13.4073,13.56,,,,
+16,swarm,1,13.8729,16.57,304,1720,568,31
+16,bare,2,13.7326,13.88,,,,
+16,swarm,2,13.8844,16.58,305,1762,671,61
+16,bare,3,13.4924,13.65,,,,
+16,swarm,3,13.8326,16.73,505,1752,767,91

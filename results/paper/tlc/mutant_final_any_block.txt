@@ -1,0 +1,163 @@
+TLC2 Version 2.19 of 08 August 2024 (rev: 5a47802)
+Running breadth-first search Model-Checking with fp 122 and seed -2470433737834985769 with 16 workers on 32 cores with 14252MB heap and 64MB offheap memory [pid: 2111783] (Linux 6.18.33.2-microsoft-standard-WSL2 amd64, Ubuntu 25.0.4.1 x86_64, MSBDiskFPSet, DiskStateQueue).
+Parsing file /tmp/tmp.fr1eV97o1S/m2/MC_n4_f2_amnesic.tla
+Parsing file /tmp/tmp.fr1eV97o1S/m2/SwarmFinality.tla
+Parsing file /tmp/Integers.tla
+Parsing file /tmp/FiniteSets.tla
+Parsing file /tmp/Sequences.tla
+Parsing file /tmp/Naturals.tla
+Semantic processing of module Naturals
+Semantic processing of module Integers
+Semantic processing of module Sequences
+Semantic processing of module FiniteSets
+Semantic processing of module SwarmFinality
+Semantic processing of module MC_n4_f2_amnesic
+Starting... (2026-10-22 21:01:52)
+Computing initial states...
+Computed 2 initial states...
+Computed 4 initial states...
+Computed 8 initial states...
+Computed 16 initial states...
+Computed 32 initial states...
+Computed 64 initial states...
+Computed 128 initial states...
+Computed 256 initial states...
+Computed 512 initial states...
+Computed 1024 initial states...
+Computed 2048 initial states...
+Computed 4096 initial states...
+Computed 8192 initial states...
+Finished computing initial states: 16384 distinct states generated at 2026-10-22 21:01:53.
+Progress(5) at 2026-10-22 21:01:56: 3,241,599 states generated (3,241,599 s/min), 2,059,787 distinct states found (2,059,787 ds/min), 1,324,099 states left on queue.
+Error: Invariant FinalAccountability is violated.
+Error: The behavior up to this point is:
+State 1: <Initial predicate>
+/\ decision = (c1 :> None @@ c2 :> None)
+/\ final = { [src |-> b1, v |-> A],
+  [src |-> b1, v |-> B],
+  [src |-> b2, v |-> A],
+  [src |-> b2, v |-> B] }
+/\ prevote = { [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b2, v |-> A] }
+/\ propose = {[r |-> 1, src |-> b1, v |-> A, vr |-> -1]}
+/\ lockedRound = (c1 :> -1 @@ c2 :> -1)
+/\ validRound = (c1 :> -1 @@ c2 :> -1)
+/\ step = (c1 :> "propose" @@ c2 :> "propose")
+/\ lockedValue = (c1 :> None @@ c2 :> None)
+/\ validValue = (c1 :> None @@ c2 :> None)
+/\ committed = (c1 :> None @@ c2 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 0)
+/\ precommit = { [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b2, v |-> A] }
+
+State 2: <InsertProposal line 109, col 3 to line 115, col 51 of module SwarmFinality>
+/\ decision = (c1 :> None @@ c2 :> None)
+/\ final = { [src |-> b1, v |-> A],
+  [src |-> b1, v |-> B],
+  [src |-> b2, v |-> A],
+  [src |-> b2, v |-> B] }
+/\ prevote = { [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b2, v |-> A] }
+/\ propose = { [r |-> 0, src |-> c1, v |-> A, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> -1] }
+/\ lockedRound = (c1 :> -1 @@ c2 :> -1)
+/\ validRound = (c1 :> -1 @@ c2 :> -1)
+/\ step = (c1 :> "propose" @@ c2 :> "propose")
+/\ lockedValue = (c1 :> None @@ c2 :> None)
+/\ validValue = (c1 :> None @@ c2 :> None)
+/\ committed = (c1 :> None @@ c2 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 0)
+/\ precommit = { [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b2, v |-> A] }
+
+State 3: <UponProposal line 119, col 3 to line 125, col 67 of module SwarmFinality>
+/\ decision = (c1 :> None @@ c2 :> None)
+/\ final = { [src |-> b1, v |-> A],
+  [src |-> b1, v |-> B],
+  [src |-> b2, v |-> A],
+  [src |-> b2, v |-> B] }
+/\ prevote = { [r |-> 0, src |-> c1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b2, v |-> A] }
+/\ propose = { [r |-> 0, src |-> c1, v |-> A, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> -1] }
+/\ lockedRound = (c1 :> -1 @@ c2 :> -1)
+/\ validRound = (c1 :> -1 @@ c2 :> -1)
+/\ step = (c1 :> "prevote" @@ c2 :> "propose")
+/\ lockedValue = (c1 :> None @@ c2 :> None)
+/\ validValue = (c1 :> None @@ c2 :> None)
+/\ committed = (c1 :> None @@ c2 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 0)
+/\ precommit = { [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b2, v |-> A] }
+
+State 4: <UponQuorumPrevotes line 146, col 3 to line 157, col 70 of module SwarmFinality>
+/\ decision = (c1 :> None @@ c2 :> None)
+/\ final = { [src |-> b1, v |-> A],
+  [src |-> b1, v |-> B],
+  [src |-> b2, v |-> A],
+  [src |-> b2, v |-> B] }
+/\ prevote = { [r |-> 0, src |-> c1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b2, v |-> A] }
+/\ propose = { [r |-> 0, src |-> c1, v |-> A, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> -1] }
+/\ lockedRound = (c1 :> 0 @@ c2 :> -1)
+/\ validRound = (c1 :> 0 @@ c2 :> -1)
+/\ step = (c1 :> "precommit" @@ c2 :> "propose")
+/\ lockedValue = (c1 :> A @@ c2 :> None)
+/\ validValue = (c1 :> A @@ c2 :> None)
+/\ committed = (c1 :> None @@ c2 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 0)
+/\ precommit = { [r |-> 0, src |-> c1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b2, v |-> A] }
+
+State 5: <Decide line 176, col 3 to line 184, col 57 of module SwarmFinality>
+/\ decision = (c1 :> A @@ c2 :> None)
+/\ final = { [src |-> c1, v |-> A],
+  [src |-> c1, v |-> B],
+  [src |-> b1, v |-> A],
+  [src |-> b1, v |-> B],
+  [src |-> b2, v |-> A],
+  [src |-> b2, v |-> B] }
+/\ prevote = { [r |-> 0, src |-> c1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b2, v |-> A] }
+/\ propose = { [r |-> 0, src |-> c1, v |-> A, vr |-> -1],
+  [r |-> 1, src |-> b1, v |-> A, vr |-> -1] }
+/\ lockedRound = (c1 :> 0 @@ c2 :> -1)
+/\ validRound = (c1 :> 0 @@ c2 :> -1)
+/\ step = (c1 :> "decided" @@ c2 :> "propose")
+/\ lockedValue = (c1 :> A @@ c2 :> None)
+/\ validValue = (c1 :> A @@ c2 :> None)
+/\ committed = (c1 :> None @@ c2 :> None)
+/\ round = (c1 :> 0 @@ c2 :> 0)
+/\ precommit = { [r |-> 0, src |-> c1, v |-> A],
+  [r |-> 0, src |-> b1, v |-> A],
+  [r |-> 0, src |-> b2, v |-> A],
+  [r |-> 1, src |-> b1, v |-> A],
+  [r |-> 1, src |-> b2, v |-> A] }
+
+6040171 states generated, 3636502 distinct states found, 2172447 states left on queue.
+The depth of the complete state graph search is 5.
+The average outdegree of the complete state graph is 2 (minimum is 0, the maximum 6 and the 95th percentile is 5).
+Finished in 05s at (2026-10-22 21:01:58)
